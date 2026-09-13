@@ -1,0 +1,29 @@
+trials:
+  n_per_condition: 20
+  seeds_formula: "1001 + i*997 for i in 0..19"
+
+trajectory:
+  n_steps: 80
+  dt_seconds: 0.15
+  path: rectangular_10m
+
+lidar:
+  n_beams: 180
+  fov_degrees: 270
+  max_range_m: 7.0
+  range_noise_sigma_m: 0.025
+
+filters:
+  geometric_threshold_m: 0.5
+  semantic_exclusion_radius_m: 0.4
+
+ate_definition: "RMSE of 2-D (x,y) position error over all trajectory steps"
+
+odometry_model:
+  type: calibrated_systematic_drift
+  high: {d_base: 0.07157, d_cont: 0.07000, sigma_rand: 0.00076}
+  low:  {d_base: 0.03718, d_cont: 0.01252, sigma_rand: 0.00038}
+
+recall_sweep:
+  levels: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+  noise_model: false_negatives_only

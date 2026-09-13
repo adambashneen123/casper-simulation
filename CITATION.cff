@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite as below."
+type: software
+title: "CASPER Simulation — Reproducibility Package"
+abstract: >
+  Simulation code and data for the preprint 'CASPER: A Simulation-Validated
+  Design Study of Semantic Dynamic-Object Filtering for LiDAR Odometry in
+  Industrial Warehouse Environments'. Preprint; not peer reviewed.
+  CASPER is a proposed architecture; the full LIO-SAM + RandLA-Net integration
+  was not implemented. Results validate the class-conditioned exclusion
+  principle only.
+authors:
+  - name: "[Author name — fill in before publishing]"
+version: "1.0.0"
+date-released: "2026-09-14"
+license: MIT
+repository-code: "https://github.com/[username]/casper-simulation"
+doi: "[Zenodo DOI — fill in after deposit]"
+keywords:
+  - LiDAR SLAM
+  - semantic segmentation
+  - dynamic object removal
+  - warehouse robotics
+  - simulation
+  - design study
